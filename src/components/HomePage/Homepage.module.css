@@ -1,0 +1,59 @@
+.homeblock{
+  position: relative;
+  height: 524px;
+  padding: 84px  24px;
+  background-image: url('../../../assets/ce0138615e317a8ad157972ab5c3fb64f6f92e8a.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+
+  color: #FFF;
+  font-family: Manrope;
+
+}
+
+.homeblock:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    
+  }
+
+  .hometext{
+    position: relative;
+    top:auto;
+    font-size: 36px;
+    text-align: center;
+    z-index: 2;
+  }
+
+ .homebtn{
+    width: 274px;
+    height: 44px;
+    padding: 12px;
+    margin-top: 64px;
+    justify-content: center;
+    align-items: center;
+    
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+
+    border-radius: 12px;
+    background: #3470FF;
+    border-color: transparent;
+
+}
+
+.homebtn:hover,
+.homebtn:focus{
+  background-color: #0B44CD;
+}
