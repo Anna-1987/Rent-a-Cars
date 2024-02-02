@@ -1,113 +1,163 @@
-# React homework template
+## App for a car rental company
 
-Этот проект был создан при помощи
-[Create React App](https://github.com/facebook/create-react-app). Для знакомства
-и настройки дополнительных возможностей
-[обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started).
+## Description.
 
-## Создание репозитория по шаблону
+The application consists of 3 pages:
 
-Используй этот репозиторий организации GoIT как шаблон для создания репозитория
-своего проекта. Для этого нажми на кнопку `«Use this template»` и выбери опцию
-`«Create a new repository»`, как показано на изображении.
+- home page with a general description of the services provided by the company.
+- a page containing a catalogue of cars of various configurations, which the
+  user can filter by brand, price per hour of car rental and number of
+  kilometres, travelled by the car during its operation (mileage).
+- a page with ads that have been added to the user's favourites.
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+All pages have a header with a page menu, a viewing area for the main
+information, and a footer with the contact details of the app owner.
 
-На следующем шаге откроется страница создания нового репозитория. Заполни поле
-его имени, убедись что репозиторий публичный, после чего нажми кнопку
-`«Create repository from template»`.
+## Home page.
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+1. It has a hero section with a general description of the service and a link to
+   the catalogue page car catalogue page.
+2. If necessary, sections with information about the company, detailed
+   description of services and car rental conditions.
 
-После того как репозиторий будет создан, необходимо перейти в настройки
-созданного репозитория на вкладку `Settings` > `Actions` > `General` как
-показано на изображении.
+## Car catalogue page
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+### Section with car cards
 
-Проскролив страницу до самого конца, в секции `«Workflow permissions»` выбери
-опцию `«Read and write permissions»` и поставь галочку в чекбоксе. Это
-необходимо для автоматизации процесса деплоя проекта.
+1. When you open the page, the first 12 car rental ads from the database are
+   rendered.
+2. Each next 12 ads from the database can be loaded on the page by clicking on
+   the `Load more` button. It is located under the ads.
+3. When all the ads from the database are loaded, the `Load more` button
+   disappears.
+4. When you click on the heart button on the ad card, it is added to the list of
+   favourites to the list of favourites, and the colour of the button changes to
+   blue.
+5. When the page refreshes, the end result of the user's actions is recorded
+   (favourites cars remain in the list of favourites). Implemented using local
+   storage.
+6. If you click on the "heart" button again, the advert is removed from the the
+   list of favourites, and the colour of the button changes to its original
+   state.
+7. Clicking on the Learn more button opens a modal window with detailed
+   information about the car and its rental conditions.
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+### Modal window with detailed information about the car
 
-Теперь у тебя есть личный репозиторий проекта, со структурой файлов и папок
-репозитория-шаблона. Далее работай с ним как с любым другим личным репозиторием,
-клонируй его себе на компьютер, пиши код, делай коммиты и отправляй их на
-GitHub.
+1. The modal window is closed by clicking on the button in the form of a
+   "cross", by clicking on the `backdrop` button or by pressing the `Esc` key.
+2. The `Rental car` button allows the user to contact the company by phone
+   number +380730000000.
 
-## Подготовка к работе
+   ### Vehicle card filtering section
 
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Установи базовые зависимости проекта командой `npm install`.
-3. Запусти режим разработки, выполнив команду `npm start`.
-4. Перейди в браузере по адресу [http://localhost:3000](http://localhost:3000).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
+3. The first car search field by brand is implemented using `dropdown` with car
+   brands. The list of car brands consists of all brands, that are already in
+   the database.
+4. The second search field for cars in the price range up to the specified
+   amount per hour of rent the car is implemented with the help of `dropdown`.
+   The step is $10.
+5. The third group of `input` allows you to choose a car in the selected
+   interval of its mileage. The user enters an integer into the field, and it is
+   displayed separated by commas, after thousands (for example, the user enters
+   4500 and sees 4,500).
+6. The car mileage fields can be reset by pressing the 'delete' button (with a
+   cross). It appears as soon as the field is no longer empty.
+7. All selected filters can be reset simultaneously by pressing the `Reset`
+   button that appears button that appears if at least one filter is selected.
+8. The car search is performed by pressing the `Search` button.
 
-## Деплой
+## Page of selected cars
 
-Продакшн версия проекта будет автоматически проходить линтинг, собираться и
-деплоиться на GitHub Pages, в ветку `gh-pages`, каждый раз когда обновляется
-ветка `main`. Например, после прямого пуша или принятого пул-реквеста. Для этого
-необходимо в файле `package.json` отредактировать поле `homepage`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
+1. Renders the cars that have been added to the list of favourites.
+2. If there are no selected cars, a blank page is displayed with a blank page
+   with an offer to visit the car catalogue and a link to the catalogue.
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
+## Test task
 
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
+## Description.
 
-![GitHub Pages settings](./assets/repo-settings.png)
+Create an application for a company that provides car rental services in
+Ukraine. for rent in Ukraine. The application consists of 3 pages:
 
-### Статус деплоя
+- home page with a general description of the services provided by the company.
+  Styling and design is at your discretion.
+- a page containing a catalogue of cars of various configurations, which the
+  user can filter by brand, price per hour of car rental, and number of
+  kilometres, travelled by the car during its operation (mileage).
+- a page with ads that have been added to the user's favourites The external The
+  appearance of the application should consist of a sidebar and a viewing area.
 
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
+## Terms of reference
 
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
+1. According to.
+   [layout](https://www.figma.com/file/XhC8FSCfAkraEF5l7Hx4fL/Test?type=design&node-id=0-1&mode=design&t=Ed3b0heFOmE2LSXU-0)
+   implement a car rental ad card.
+2. On the first page of the catalogue, 8 ads should be rendered, and the rest
+   should be by clicking on the `Load more` button.
+3. When you click on the "heart" button on the ad card, it should should be
+   added to the list of favourites and the colour of the button should change.
+4. When the page is refreshed, the end result of the user's actions should be
+   recorded. That is, if you add an ad to your favourites and refresh the page,
+   the button still still remains in the "favourite ad" state with the
+   corresponding colour.
+5. If you click on the heart button again, the ad should be removed from the
+   list of favourites, and the colour of the button should change to its
+   original state.
+6. When you click on the Learn more button, a modal window should open with
+   detailed information about the car and its rental conditions.
+7. The modal window should be closed by clicking on the "cross" button, by
+   clicking on the `backdrop` button or by pressing the `Esc` key.
+8. In the code, the mileage of the car must be written in one value (for
+   example, 4500). В UI - it is displayed separated by commas (4,500).
+9. The `Rental car` button should be implemented as a link that will allow the
+   user to contact the company by phone number +380730000000.
 
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
+Create a routing using React Router. The application should have the following
+routes:
 
-![Deployment status](./assets/deploy-status.png)
+- `"/"` - the home page with a general description of the services provided by
+  the company
+- `"/catalogue"` - a page containing a catalogue of cars of different
+  configurations
+- `"/favourites"` - a page with ads that have been added by the user to
+  favourites If the user has followed a route that does not exist, he must be
+  redirect to the home page. To work with the list of ads, create your personal
+  backend for development using the UI service https://mockapi.io/. Create the
+  adverts resource. Use the resource builder and describe the advert object as
+  described below.
 
-### Живая страница
+Advert
 
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
+1. Create an `advert` in **Mockapi** with the following fields: `id`, `year`,
+   `make`, `model`, `type`, `img`, `description`, `fuelConsumption`,
+   `engineSize`, `accessories`, `functionalities`, `rentalPrice`,
+   `rentalCompany`, `address`, `rentalConditions`, `mileage` (see the screenshot
+   below). To fill the collection you can take
+   [adverts.json](https://drive.google.com/file/d/1sDtZQX4awbRiqa5mSagngqKBZeMMRUMO/view)
+2. You can choose the car image yourself.
+3. The database should contain at least 32 ads with different values (at your
+   discretion). Pagination is implemented, where one pagination page should
+   contain 8 ads.
 
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` в файле `package.json`.
+## Additional task
 
-### Маршрутизация
+Add filtering:
 
-Если приложение использует библиотеку `react-router-dom` для маршрутизации,
-необходимо дополнительно настроить компонент `<BrowserRouter>`, передав в пропе
-`basename` точное название твоего репозитория. Слеш в начале строки обязателен.
+1. `dropdown` with car brands
+   [makes.json](https://drive.google.com/file/d/1ywi6jdoqq0llsd2yDcRKwuLhuL3ds_5z/view) -
+   show ads with cars of the corresponding brand
+2. `dropdown` with prices per hour of car rental ($10 increments) - show ads
+   with cars whose rental price is within the price range selected by the by the
+   user
+3. group `input` to determine the range of mileage within which the user will
+   search for ads
 
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
+## Execution criteria
 
-## Как это работает
-
-![How it works](./assets/how-it-works.png)
-
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит линтинг и сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.
+- The layout is fixed in `rx`, semantic and valid.
+- There are no errors in the browser console.
+- Interactivity works according to the terms of reference.
+- The code is formatted and without comments.
+- The **README.md** should be described in the repository.
+- The project is deployed on **github pages** or **netlify.com**.

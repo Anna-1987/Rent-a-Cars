@@ -1,29 +1,30 @@
-import React from "react";
-// import {NavLink} from 'react-router-dom';
-import s from './Header.module.css';
+import { Container, Section } from "pages/Page.styled";
+import { HeaderStyled, LogoWrap, MainTitle, NavStyled, StyledNavLink, UlStyled, LiStyled } from "./Header.styled";
+// import Logo from "../../assets/logo.png";
 
-
-const Header = () =>{
-
+export const Header = () => {
     return (
-        <div className={s.header}>
-            <span>Rent 🚘 </span>
-
-        <ul className={s.navigator}>
-            <li className={s.navli}>
-            <a href="../HomePage"  className={s.navtext} >Home</a>
-            </li>
-           
-           <li className={s.navli}>
-           <a href="../CatalogPage" className={s.navtext}>Catalog</a>
-           </li>
-           <li className={s.navli}>
-           <a href="../HomePage" className={s.navtext}>Favorites</a>
-            </li>
-        </ul>
-
-        </div>
+        <Section>
+            <Container $bottom='0px'>
+                <HeaderStyled>
+                    <LogoWrap>
+                        <MainTitle>Rent 🚘</MainTitle>
+                    </LogoWrap>
+                    <NavStyled>
+                    <UlStyled>
+                         <LiStyled>
+                           <StyledNavLink to="/">Home</StyledNavLink>
+                         </LiStyled>
+                         <LiStyled>
+                           <StyledNavLink to="/catalog">Catalog</StyledNavLink>
+                         </LiStyled>
+                         <LiStyled>
+                         <StyledNavLink to="/favorites">Favorites</StyledNavLink>
+                         </LiStyled>
+                    </UlStyled>
+                    </NavStyled>
+                </HeaderStyled>
+            </Container>
+        </Section>
     )
-}
-
-export default Header;
+};
