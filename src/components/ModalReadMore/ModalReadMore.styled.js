@@ -76,11 +76,11 @@ export const ConditionsList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  color: var(--color-text-conditions);
+  color: #363535;
 `;
 
 export const ConditionsItem = styled.li`
   padding: 2px 8px;
   border-radius: 24px;
-  background: var(--color-back-conditions);
+  background: #F9F9F9;
 `;

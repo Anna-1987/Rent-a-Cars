@@ -51,7 +51,7 @@ export const Heart = styled.svg`
   top: 14px;
   right: 14px;
   fill: ${(props) => props.fill || 'none'};
-  stroke: ${(props) => props.stroke || 'var(--color-text-button-and-back)'};
+  stroke: ${(props) => props.stroke || '#FFF'};
   display: inline-block;
   width: 18px;
   height: 18px;
@@ -81,7 +81,7 @@ export const TitleH3 = styled.h3`
 `;
 
 export const Span = styled.span`
-  color: var(--color-text-loadmore);
+  color: #3470FF;
 `;
 
 export const DescriptListWrap = styled.div`
@@ -95,7 +95,7 @@ export const DescriptList = styled.ul`
   display: inline-flex;
   height: 18px;
   gap: 6px;
-  color: var(--color-text-second);
+  color: rgba(18, 20, 23, 0.50);
   white-space: nowrap;
   overflow-x: ${props => props.$overflow || 'hidden'};
   overflow-y: hidden;
@@ -124,14 +124,14 @@ export const Button = styled.button`
   justify-content: center;
   border: none;
   border-radius: 12px;
-  background: var(--color-button);
-  color: var(--color-text-button-and-back);
+  background: #3470FF;
+  color: #FFF;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
 
   &:hover,
   &:focus {
-    background: var(--color-button-hover);
+    background: #0B44CD;
   }
 `;

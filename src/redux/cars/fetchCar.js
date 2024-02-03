@@ -16,9 +16,9 @@ const getAllCars = async (_, thunkAPI) => {
     }
 };
 
-const getCars = async (params, thunkAPI) => {
+const getCars = async (page, thunkAPI) => {
     try {
-        const response = await axios.get('/Advert',params);
+        const response = await axios.get(`/Advert?page=${page}&limit=${LIMIT}`);
         console.log('2', response)
         return response.data;
     }

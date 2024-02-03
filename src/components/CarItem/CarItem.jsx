@@ -55,8 +55,8 @@ export const CarItem = ({ car, index }) => {
                     <Img src={img}
                         alt={make} />
                     <Heart onClick={onClickHeart}
-                        fill={isCarFavorite ? "var(--color-button)" : 'none'}
-                        stroke={isCarFavorite ? "var(--color-button)" : "var(--color-text-button-and-back)"}
+                        fill={isCarFavorite ? "#3470FF" : 'none'}
+                        stroke={isCarFavorite ? "#3470FF" : " #FFF"}
                     >
                         <use href={`${sprite}#icon-heart`} />
                     </Heart>

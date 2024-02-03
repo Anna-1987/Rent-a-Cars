@@ -11,7 +11,7 @@ export const CarsListStyle = styled.ul`
 
 export const LoadMore = styled.p`
   display: ${(props) => props.display || 'block'};
-  color: var(--color-text-loadmore);
+  color: #3470FF;
   font-size: 16px;
   font-weight: 500;
   text-decoration-line: underline;
@@ -21,6 +21,6 @@ export const LoadMore = styled.p`
 
   &:hover,
   &:focus {
-    color: var(--color-text-loadmore-hover);
+    color: #3470FF;
   }
 `;

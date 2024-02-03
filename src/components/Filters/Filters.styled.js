@@ -14,7 +14,7 @@ export const Label = styled.label`
 position: relative;
   display: flex;
   flex-direction: column;
-  color: var(--color-text-label);
+  color:  #8A8A89;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.29;
@@ -33,7 +33,7 @@ export const Input = styled.input`
   border-radius: ${props => props.$radius || '14px'};
   border: none;
   border-right: ${props => props.$border || 'none'};
-  background-color: var(--color-filter-field);
+  background-color:  #F7F7FB;
   color: transparent;
   font-size: 18px;
   font-weight: 500;
@@ -99,15 +99,15 @@ export const ButtonSearch = styled.button`
   flex-shrink: 0;
   border: none;
   border-radius: 12px;
-  background: var(--color-button);
-  color: var(--color-text-button-and-back);
+  background: #3470FF;
+  color: #FFF;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
 
   &:hover,
   &:focus {
-    background: var(--color-button-hover);
+    background: #0B44CD;
   }
 `;
 
@@ -118,7 +118,7 @@ export const customStyles = {
     lineHeight: '1.25',
     fontWeight: '500',
     color: state.isSelected ? 'var(--color-text-main)' : 'rgba(18, 20, 23, 0.20)',
-    backgroundColor: 'var(--color-text-button-and-back)', // Стилізація фона активної опції и ховера
+    backgroundColor: '#FFF', // Стилізація фона активної опції и ховера
     cursor: 'pointer',
     padding: '0px',
     margin: '0px',
@@ -142,7 +142,7 @@ export const customStyles = {
     padding:'14px 8px 14px 18px',
     borderRadius: '14px',
     border: '1px solid rgba(18, 20, 23, 0.05)',
-    background: 'var(--color-text-button-and-back)',
+    background: '#FFF',
     boxShadow: '0px 4px 36px 0px rgba(0, 0, 0, 0.02)',
   }),
 
@@ -208,7 +208,7 @@ export const firstSelectStyles = {
   control: (defaultStyles) => ({
     ...defaultStyles,
     cursor: 'pointer',
-    background: 'var(--color-filter-field)',
+    background: '#F7F7FB',
     appearance: 'none', // Removing default appearance
     WebkitAppearance: 'none',
     MozAppearance: 'none',
@@ -228,7 +228,7 @@ export const secondSelectStyles = {
   control: (defaultStyles) => ({
     ...defaultStyles,
     cursor: 'pointer',
-    background: 'var(--color-filter-field)',
+    background: ' #F7F7FB',
     appearance: 'none',
     WebkitAppearance: 'none',
     MozAppearance: 'none',
