@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectCarBrands } from "redux/selectors";
 import { Blink, ButtonSearch, Form, Input, InputWrap, Label, FalseInput, WrapSecondInput, firstSelectStyles, secondSelectStyles } from "./Filters.styled";
 import Select from 'react-select';
-import { filterSet } from "redux/filter/filterSlice";
+import { filterSet} from "redux/filter/filterSlice";
 import { makeComaInMileage } from "service/serviceFunc";
 import { Report } from 'notiflix/build/notiflix-report-aio';
 import { CloseBtnWrapper } from "components/ModalWindowWrap/ModalWindowWrap.styled";
@@ -25,7 +25,7 @@ export const Filters = () => {
     const [mileageFrom, setMileageFrom] = useState('');
     const [mileageToWithComa, setMileageToWithComa] = useState('');
     const [mileageFromWithComa, setMileageFromWithComa] = useState('');
-
+   
     const pricesArray = [{ value: 'all', label: 'All price' }];
     for (let index = 10; index < 501; index += 10) {
         pricesArray.push({ value: index, label: index });
@@ -60,6 +60,7 @@ export const Filters = () => {
         };
         dispatch(filterSet(commonFilter))
     };
+        
 
     const handleChange = (e) => {
         const { value } = e.target;
@@ -95,13 +96,15 @@ export const Filters = () => {
     };
 
     const onClickResetAll = () => {
+        
         setBrand({ value: 'all', label: 'Enter the text' });
         setToPrice({ value: 'all', label: '' });
         setMileageTo('');
         setMileageFrom('');
         setMileageToWithComa('');
         setMileageFromWithComa('');
-        onClickSearch();
+        onClickSearch('');
+        window.location.reload()
     };
     
     return (
@@ -130,9 +133,7 @@ export const Filters = () => {
             </Label>
             <InputWrap>
                 <Label>Сar mileage / km
-                    <Input type="number"
-                        pattern="[0-9]{1,5}"
-                        title="Only numbers. From 1 to 5 digits. Minimum value of 1 km"
+                    <Input type="text"
                         name="mileageFrom"
                         value={mileageFrom}
                         onChange={handleChange}
@@ -142,7 +143,7 @@ export const Filters = () => {
                         $border='1px solid rgba(138, 138, 137, 0.20)'
                     />
                     <span></span>
-                    <FalseInput>From {mileageFromWithComa}
+                    <FalseInput>From : {mileageFromWithComa}
                         {mileageFromWithComa.length > 0 && <Blink></Blink>}
                     </FalseInput>
                     {mileageFrom.length > 0 && <CloseBtnWrapper
@@ -153,9 +154,7 @@ export const Filters = () => {
                     </CloseBtnWrapper>}
                 </Label>
                 <WrapSecondInput>
-                    <Input type="number"
-                        pattern="[0-9]{1,5}"
-                        title="Only numbers. From 1 to 5 digits. Minimum value of 1 km"
+                    <Input type="text"
                         name="mileageTo"
                         value={mileageTo}
                         onChange={handleChange}
@@ -164,7 +163,7 @@ export const Filters = () => {
                         $radius='0px 14px 14px 0px'
                         $padding='14px 14px 14px 48px' />
                     <span></span>
-                    <FalseInput>To {mileageToWithComa}
+                    <FalseInput>To : {mileageToWithComa}
                         {mileageToWithComa.length > 0 && <Blink></Blink>}
                     </FalseInput>
                     {mileageTo.length > 0 && <CloseBtnWrapper
@@ -175,13 +174,13 @@ export const Filters = () => {
                     </CloseBtnWrapper>}
                 </WrapSecondInput>
             </InputWrap>
-            {(brand.value !== 'all' || toPrice.value !== 'all' || mileageFrom !== '' || mileageTo !== '') &&
-                <ButtonSearch type="button" width='80px'
-                onClick={onClickResetAll}
-            >Reset</ButtonSearch>}
             <ButtonSearch type="button"
                 onClick={onClickSearch}
             >Search</ButtonSearch>
+             {(brand.value !== 'all' || toPrice.value !== 'all' || mileageFrom !== '' || mileageTo !== '') &&
+                <ButtonSearch type="button" width='80px'
+                onClick={onClickResetAll}
+            >Reset</ButtonSearch>}
         </Form>
     )
 };

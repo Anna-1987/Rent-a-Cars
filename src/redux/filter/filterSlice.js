@@ -13,7 +13,7 @@ export const filterSlice = createSlice({
             state.filter = payload;
         },
         filterDelete(state, { payload }) {
-            state.filter = null;
+            state.filter = payload;
         },
         filterCarsSet(state, { payload }) {
             state.filterCars = payload;

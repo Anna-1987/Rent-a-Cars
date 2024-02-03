@@ -8,7 +8,6 @@ export const LIMIT = 12;
 const getAllCars = async (_, thunkAPI) => {
     try {
         const response = await axios.get('/Advert');
-        console.log('1', response);
         return response.data;
     }
     catch (e) {
@@ -19,7 +18,6 @@ const getAllCars = async (_, thunkAPI) => {
 const getCars = async (page, thunkAPI) => {
     try {
         const response = await axios.get(`/Advert?page=${page}&limit=${LIMIT}`);
-        console.log('2', response)
         return response.data;
     }
     catch (e) {

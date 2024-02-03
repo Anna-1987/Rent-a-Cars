@@ -58,7 +58,7 @@ export const Input = styled.input`
 
 export const FalseInput = styled.div`
   display: flex;
-  color: var(--color-text-main);
+  color: #121417;
   position: absolute;
   bottom: 14px;
   left: ${props => props.$left || '24px'};
@@ -117,7 +117,7 @@ export const customStyles = {
     fontSize: '16px',
     lineHeight: '1.25',
     fontWeight: '500',
-    color: state.isSelected ? 'var(--color-text-main)' : 'rgba(18, 20, 23, 0.20)',
+    color: state.isSelected ? '#121417' : 'rgba(18, 20, 23, 0.20)',
     backgroundColor: '#FFF', // Стилізація фона активної опції и ховера
     cursor: 'pointer',
     padding: '0px',
@@ -132,7 +132,7 @@ export const customStyles = {
     ...defaultStyles,
     fontSize: '18px',
     lineHeight: '1.11',
-    color: 'var(--color-text-main)',
+    color: '#121417',
   }),
 
   menu: (defaultStyles) => ({
@@ -154,7 +154,7 @@ export const customStyles = {
   dropdownIndicator: (defaultStyles) => ({
     ...defaultStyles,
     paddingRight: '18px',
-    color: 'var(--color-text-main)',
+    color: '#121417',
   }),
 
   container: (defaultStyles, state) => ({
@@ -194,7 +194,7 @@ export const customStyles = {
 
   placeholder: (defaultStyles) => ({
     ...defaultStyles,
-    color: 'var(--color-text-main)',
+    color: '#121417',
     fontWeight: '500',
     fontSize: '18px',
     lineHeight: '1.11',
