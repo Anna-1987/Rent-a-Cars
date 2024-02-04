@@ -7,7 +7,7 @@ export const HeaderStyled = styled.header`
   justify-content: space-between;
   align-items: center;
   font-size: 24px;
-  padding: 15px 20px;
+  padding: 15px 64px;
   background-color:  #0B44CD;
   
   }

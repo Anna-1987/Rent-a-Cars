@@ -62,7 +62,7 @@ export const ModalReadMore = ({ car }) => {
                             <Span> {model}</Span>, {year}
                         </ModalTitleH3>
                         <DescriptListWrap>
-                            <DescriptList>
+                            <DescriptList >
                                 <DescriptItem>{cityCountry[0]}</DescriptItem>
                                 <DescriptItem>{cityCountry[1]}</DescriptItem>
                                 <DescriptItem>Id: {id}</DescriptItem>

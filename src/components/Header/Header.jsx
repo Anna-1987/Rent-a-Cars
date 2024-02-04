@@ -5,7 +5,6 @@ import { HeaderStyled, LogoWrap, MainTitle, NavStyled, StyledNavLink, UlStyled, 
 export const Header = () => {
     return (
         <Section>
-            <Container $bottom='0px'>
                 <HeaderStyled>
                     <LogoWrap>
                         <MainTitle>Rent 🚘</MainTitle>
@@ -24,7 +23,6 @@ export const Header = () => {
                     </UlStyled>
                     </NavStyled>
                 </HeaderStyled>
-            </Container>
         </Section>
     )
 };

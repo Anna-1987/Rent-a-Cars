@@ -22,6 +22,8 @@ export const Container = styled.div`
   margin: 0 auto;
   padding-bottom: ${props => props.$bottom || '20px'};
   padding-top: ${props => props.$top || '0px'};
+  padding-left: 120px;
+  padding-right:120px;
 
 `;
 
