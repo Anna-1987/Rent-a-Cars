@@ -60,7 +60,6 @@ export const Filters = () => {
             }
         };
         dispatch(filterSet(commonFilter))
-        console.log(commonFilter);
     };
         
 
