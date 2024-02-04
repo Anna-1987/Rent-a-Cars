@@ -1,4 +1,4 @@
-import { Container, Section } from "pages/Page.styled";
+import { Section } from "pages/Page.styled";
 import { HeaderStyled, LogoWrap, MainTitle, NavStyled, StyledNavLink, UlStyled, LiStyled } from "./Header.styled";
 // import Logo from "../../assets/logo.png";
 

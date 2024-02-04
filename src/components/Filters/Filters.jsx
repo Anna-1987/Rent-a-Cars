@@ -9,8 +9,6 @@ import { Report } from 'notiflix/build/notiflix-report-aio';
 import { CloseBtnWrapper } from "components/ModalWindowWrap/ModalWindowWrap.styled";
 import sprite from '../../assets/sprite.svg';
 
-const ulEl = document.querySelector('ul');
-
 export const options = {
     svgSize: '42px',
     position: 'center-center',
