@@ -1,16 +1,8 @@
 {
-  "name": "rent-a-cars",
+  "name": "Rent-a-Cars",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Anna-1987.github.io/rent-a-cars/",
-  "scripts": {
-    "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /rent-a-cars/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
-  },
+  "homepage": "https://Anna-1987.github.io/Rent-a-Cars/",
   "dependencies": {
     "@mui/icons-material": "^5.14.18",
     "@reduxjs/toolkit": "^1.9.7",
