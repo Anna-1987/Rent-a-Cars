@@ -61,12 +61,14 @@ export const Filters = () => {
             }
         };
         dispatch(filterSet(commonFilter))
+        console.log(commonFilter);
     };
         
 
     const handleChange = (e) => {
         const { value } = e.target;
         const valueWithComa = makeComaInMileage(value);
+        console.log(valueWithComa);
 
         switch (e.target.name) {
             case 'mileageFrom':
