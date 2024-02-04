@@ -1,6 +1,6 @@
-import { Container, Welcome, Section, WelcomeWrap, BtnGo, SectionBackdrop, Link } from "./Page.styled";
+import { Container, Welcome, Section, WelcomeWrap, BtnGo, SectionBackdrop } from "./Page.styled";
 import auto from '../assets/ce0138615e317a8ad157972ab5c3fb64f6f92e8a.jpg'
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
     return (

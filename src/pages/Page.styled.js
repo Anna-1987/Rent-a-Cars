@@ -7,24 +7,23 @@ export const Section = styled.section`
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
+ 
 `;
 
 export const SectionBackdrop = styled.div `
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 564px;
   background-color: rgba(46, 47, 66, 0.7);
 `;
 
 export const Container = styled.div` 
-  display: flex;
   flex-direction: column;
   margin: 0 auto;
   padding-bottom: ${props => props.$bottom || '20px'};
   padding-top: ${props => props.$top || '0px'};
   padding-left: 120px;
   padding-right:120px;
-
 `;
 
 export const EmptyPage = styled.div`
@@ -42,8 +41,8 @@ export const EmptyPage = styled.div`
 export const WelcomeWrap = styled.div`
   position: relative;
   z-index:2;
+  height: 564px;
   display: flex;
-  height: 100vh;
   justify-content: center;
   padding: 15px 0px;
   font-weight: 600;
@@ -55,7 +54,7 @@ export const Welcome = styled.div`
   font-size: 36px;
   text-align: center;
   margin: auto 0;
-  padding: 25px;
+  padding: 15px;
   color: #fff;
   }
 `;

@@ -9,7 +9,7 @@ export const FooterStyle = styled.div`
   padding: 20px 0px;
   font-size: 18px;
   color: #FFF;
-  background-color: #3470FF;
+  background-color: #0B44CD;
 `;
 
 export const LinkStyle = styled.a`
