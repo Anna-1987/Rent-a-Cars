@@ -7,6 +7,7 @@ import { filterSet} from "redux/filter/filterSlice";
 import { makeComaInMileage } from "service/serviceFunc";
 import { Report } from 'notiflix/build/notiflix-report-aio';
 import { CloseBtnWrapper } from "components/ModalWindowWrap/ModalWindowWrap.styled";
+import Catalog from '../../pages/Catalog';
 import sprite from '../../assets/sprite.svg';
 
 export const options = {
@@ -66,7 +67,6 @@ export const Filters = () => {
     const handleChange = (e) => {
         const { value } = e.target;
         const valueWithComa = makeComaInMileage(value);
-        console.log(valueWithComa);
 
         switch (e.target.name) {
             case 'mileageFrom':
@@ -98,15 +98,12 @@ export const Filters = () => {
     };
 
     const onClickResetAll = () => {
-        
         setBrand({ value: 'all', label: 'Enter the text' });
         setToPrice({ value: 'all', label: '' });
         setMileageTo('');
         setMileageFrom('');
         setMileageToWithComa('');
         setMileageFromWithComa('');
-        onClickSearch('');
-        window.location.reload()
     };
     
     return (
